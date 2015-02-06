@@ -23,7 +23,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Read /spec/appbaseio/client\_spec.rb
+
+```
+require 'Appbaseio'
+options = {
+  server_host:  'api.appbase.io',
+  app_name: 'testapp',
+  api_version: 'v2',
+  namespace: 'test_api',
+  app_secret: 'your secret'
+}
+client = Appbaseio::Client.new(options)
+client.create_properties vertex: 'abc', data: {foo: 'bar'}
+```
 
 ## Contributing
 
