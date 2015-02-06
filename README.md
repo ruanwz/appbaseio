@@ -1,6 +1,9 @@
 # Appbaseio
 
-TODO: Write a gem description
+[![Build
+Status](https://travis-ci.org/ruanwz/appbaseio.svg)](https://travis-ci.org/ruanwz/appbaseio)
+
+AppBase.io Ruby Rest Client
 
 ## Installation
 
