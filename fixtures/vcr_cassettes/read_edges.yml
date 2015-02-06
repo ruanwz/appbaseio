@@ -1,0 +1,159 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: https://api.appbase.io/testapp/v2/test_api/iron/~properties
+    body:
+      encoding: UTF-8
+      string: '{"data":{"foo":"bar"}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Appbase-Secret:
+      - c1506ccb1db1ef61dc07f3546decf281
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '81'
+      Date:
+      - Fri, 06 Feb 2015 08:55:50 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"foo":"bar","timestamp":1423212950648,"_id":"test_api`54d47e8eb984f4bd156a7955"}'
+    http_version: 
+  recorded_at: Fri, 06 Feb 2015 07:12:00 GMT
+- request:
+    method: patch
+    uri: https://api.appbase.io/testapp/v2/test_api/ice/~properties
+    body:
+      encoding: UTF-8
+      string: '{"data":{"cat":"dog"}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Appbase-Secret:
+      - c1506ccb1db1ef61dc07f3546decf281
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '81'
+      Date:
+      - Fri, 06 Feb 2015 08:55:52 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"cat":"dog","timestamp":1423212952007,"_id":"test_api`54d47e92b984f4bd156a7957"}'
+    http_version: 
+  recorded_at: Fri, 06 Feb 2015 07:12:00 GMT
+- request:
+    method: patch
+    uri: https://api.appbase.io/testapp/v2/test_api/ice/~edges
+    body:
+      encoding: UTF-8
+      string: '{"data":{"anEdge":{"path":"test_api/iron"}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Appbase-Secret:
+      - c1506ccb1db1ef61dc07f3546decf281
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '133'
+      Date:
+      - Fri, 06 Feb 2015 08:55:53 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"_id":"test_api`54d47e92b984f4bd156a7957","edges":{"anEdge":{"t_id":"test_api`54d47e8eb984f4bd156a7955","timestamp":1423212953354}}}'
+    http_version: 
+  recorded_at: Fri, 06 Feb 2015 07:12:00 GMT
+- request:
+    method: post
+    uri: https://api.appbase.io/testapp/v2/test_api/ice/~edges
+    body:
+      encoding: UTF-8
+      string: '{"filters":{}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Appbase-Secret:
+      - c1506ccb1db1ef61dc07f3546decf281
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '149'
+      Date:
+      - Fri, 06 Feb 2015 08:55:54 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"edges":{"anEdge":{"t_id":"test_api`54d47e8eb984f4bd156a7955","timestamp":1423212953354}},"optype":"RETR","_id":"test_api`54d47e92b984f4bd156a7957"}'
+    http_version: 
+  recorded_at: Fri, 06 Feb 2015 07:12:00 GMT
+recorded_with: VCR 2.9.3
