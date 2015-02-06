@@ -15,7 +15,7 @@ module Appbaseio
       'delete' => :delete,
       'properties' => :patch
   }
-  TARGETS = %w{list properties edges}
+  TARGETS = %w{list properties edges search}
   class Client
     include Virtus.model
     attribute :server_host, String, default: 'api.appbase.io'
@@ -56,6 +56,7 @@ module Appbaseio
       data = {data: options[:data]}
       data = {all: true} if operation == 'read' and target == 'properties'
       data = {filters: {}} if operation == 'read' and target == 'edges'
+      data = options[:data] if target == 'search'
 
       method = HTTP_METHOD_MAP[operation]
       if data

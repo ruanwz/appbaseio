@@ -35,6 +35,14 @@ describe Appbaseio::Client do
 
   end
 
+  it "search vertex" do
+    VCR.use_cassette('search vertex') do
+      subject.create_properties vertex: 'notebook', data: {foo: 'some joke'}
+      resp = subject.read_search data: {query: {text: 'some joke', properties: ["foo"]}}
+
+      expect(resp.status).to be 204
+    end
+  end
   it "create vertex" do
     VCR.use_cassette('create vertex') do
       resp = subject.create_properties vertex: 'abc', data: {foo: 'bar'}
@@ -95,4 +103,5 @@ describe Appbaseio::Client do
       expect(resp.status).to be 200
     end
   end
+
 end
