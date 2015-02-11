@@ -31,16 +31,13 @@ describe Appbaseio::Client do
     end
   end
 
-  it "search vertices" do
-
-  end
-
   it "search vertex" do
     VCR.use_cassette('search vertex') do
       subject.create_properties vertex: 'notebook', data: {foo: 'some joke'}
-      resp = subject.read_search data: {query: {text: 'some joke', properties: ["foo"]}}
+      resp = subject.read_search data: {query: {text: 'joke', properties: ["foo"]}}
 
-      expect(resp.status).to be 204
+      expect(resp.status).to be 200
+      expect(resp.body[0]).to include "foo" => 'some joke'
     end
   end
   it "create vertex" do

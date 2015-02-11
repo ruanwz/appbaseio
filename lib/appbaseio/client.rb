@@ -34,7 +34,7 @@ module Appbaseio
     def rest_client
       Faraday.new(url: "https://"+server_host) do |faraday|
         #faraday.request :url_encoded
-        faraday.response :logger
+        #faraday.response :logger
         faraday.request :json
         faraday.response :json
         faraday.response :mashify

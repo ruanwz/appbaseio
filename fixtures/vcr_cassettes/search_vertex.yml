@@ -1,0 +1,82 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: https://api.appbase.io/testapp/v2/test_api/notebook/~properties
+    body:
+      encoding: UTF-8
+      string: '{"data":{"foo":"some joke"}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Appbase-Secret:
+      - c1506ccb1db1ef61dc07f3546decf281
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '87'
+      Date:
+      - Wed, 11 Feb 2015 03:18:56 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"foo":"some joke","timestamp":1423624736692,"_id":"test_api`54d48a22b984f4bd156a7c61"}'
+    http_version: 
+  recorded_at: Fri, 06 Feb 2015 07:12:00 GMT
+- request:
+    method: post
+    uri: https://api.appbase.io/testapp/v2/test_api/~search
+    body:
+      encoding: UTF-8
+      string: '{"query":{"text":"joke","properties":["foo"]}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Appbase-Secret:
+      - c1506ccb1db1ef61dc07f3546decf281
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '120'
+      Date:
+      - Wed, 11 Feb 2015 03:18:58 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[{"_id":"test_api`54d48a22b984f4bd156a7c61","timestamp":1423624736692,"rootPath":"test_api/notebook","foo":"some
+        joke"}]'
+    http_version: 
+  recorded_at: Fri, 06 Feb 2015 07:12:00 GMT
+recorded_with: VCR 2.9.3
